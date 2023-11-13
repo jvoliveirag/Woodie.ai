@@ -15,7 +15,7 @@ O projeto é dividido em três partes principais:
 3. **Fine-tuning:** Nesta etapa foram aplicados os fundamentos de Machine Learning, bem como as práticas recomendadas pela <a href="#openai">OpenAI</a>.
     * Primeiramente foram coletados e gerados dados sobre o tema;
     * Então foram divididos em 70% para treino e 30% para teste; 
-    * Em seguida os dados foram estruturados conforme especificado na documentação da OpenAI (vide no exemplo abaixo ou <a href="">clique aqui</a> para visualizar todo o arquivo)
+    * Em seguida os dados foram estruturados conforme especificado na documentação da OpenAI (vide no exemplo abaixo ou <a href="https://github.com/jvoliveirag/TCC/blob/main/fine_tuning/data/training_data.jsonl">clique aqui</a> para visualizar todo o arquivo)
 
       ~~~JSON
       {"messages": [{"role": "system", "content": "You are a technical assistant that helps a FIRST LEGO League team on their robot design process."}, {"role": "user", "content": "Como nós podemos ajustar as configurações do controlador PID para atender às necessidades específicas do nosso robô, considerando a estratégia de missão?"}, {"role": "assistant", "content": "Realizem testes práticos, coletem dados de desempenho, e ajustem os parâmetros do PID com base nos resultados para otimizar o controle do robô."}]}
