@@ -1,0 +1,15 @@
+
+# @name get-prompts
+GET http://localhost:3333/prompts
+
+### 
+
+# @name generate-ai-completion
+
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+  "temperature": 0.5,
+  "prompt": "me fale as melhores rodas para um robo de fll"
+}

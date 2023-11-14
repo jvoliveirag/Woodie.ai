@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+//Tabela
+model Prompt {
+  id       String @id @default(uuid())
+  title    String
+  template String
+}
