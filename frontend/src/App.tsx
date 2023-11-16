@@ -11,7 +11,7 @@ import { Textarea } from "./components/ui/textarea";
 
 export function App() {
 
-  const [temperature, setTemperature] = useState(0.5)
+  const [temperature, setTemperature] = useState(1)
   
   const { input, setInput, handleInputChange, handleSubmit, completion, isLoading } = useCompletion({
     api: 'http://localhost:3333/ai/complete',
@@ -101,7 +101,7 @@ export function App() {
               <Slider
                 className="cursor-pointer"
                 min={0}
-                max={1}
+                max={2}
                 step={0.1}
                 value={[temperature]}
                 onValueChange={value => setTemperature(value[0])}
