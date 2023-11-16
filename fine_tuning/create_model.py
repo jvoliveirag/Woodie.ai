@@ -12,6 +12,11 @@ file_id = os.getenv("FILE_ID")
 client = OpenAI(api_key = api_key)
 client.fine_tuning.jobs.create(
   training_file = file_id, 
-  model = "gpt-3.5-turbo",
-  suffix = "woodie.ai"
+  model = "ft:gpt-3.5-turbo-0613:personal:woodie-ai:8KXGjDZN",
+  suffix = "woodie2.ai",
+  hyperparameters={
+    "n_epochs":10
+  }
 )
+
+print(f"Request for training new model accepted - please check the OpenAI platform")

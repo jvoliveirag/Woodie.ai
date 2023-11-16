@@ -117,7 +117,7 @@ print(f"\n{n_too_long} examples may be over the 4096 token limit, they will be t
 # Pricing and default n_epochs estimate
 MAX_TOKENS_PER_EXAMPLE = 4096
 
-TARGET_EPOCHS = 3
+TARGET_EPOCHS = 15
 MIN_TARGET_EXAMPLES = 100
 MAX_TARGET_EXAMPLES = 25000
 MIN_DEFAULT_EPOCHS = 1
