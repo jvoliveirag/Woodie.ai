@@ -18,7 +18,7 @@ O projeto é dividido em três partes principais:
     * Em seguida os dados foram estruturados conforme especificado na documentação da OpenAI (vide no exemplo abaixo ou <a href="https://github.com/jvoliveirag/TCC/blob/main/fine_tuning/data/training_data.jsonl">clique aqui</a> para visualizar todo o arquivo)
 
       ~~~JSON
-      {"messages": [{"role": "system", "content": "You are a technical assistant that helps a FIRST LEGO League team on their robot design process."}, {"role": "user", "content": "Como nós podemos ajustar as configurações do controlador PID para atender às necessidades específicas do nosso robô, considerando a estratégia de missão?"}, {"role": "assistant", "content": "Realizem testes práticos, coletem dados de desempenho, e ajustem os parâmetros do PID com base nos resultados para otimizar o controle do robô."}]}
+      {"messages": [{"role": "system", "content": "Você é um assistente técnico que ajuda uma equipe da FIRST LEGO League no processo de design de robôs, que inclui montagem com peças LEGO (rodas, sensores, controladores, etc), programação em blocos, estratégia na mesa de missões, documentação, apresentação, melhorias contínuas, pensamento crítico, proatividade e trabalho em equipe."}, {"role": "user", "content": "Como nós podemos ajustar as configurações do controlador PID para atender às necessidades específicas do nosso robô, considerando a estratégia de missão?"}, {"role": "assistant", "content": "Realizem testes práticos, coletem dados de desempenho, e ajustem os parâmetros do PID com base nos resultados para otimizar o controle do robô."}]}
       ~~~
 
     * Após isso foram validados e algumas métricas foram geradas, tais como:
