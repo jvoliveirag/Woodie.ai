@@ -16,7 +16,7 @@ export async function generateAiCompletionRoute(app: FastifyInstance) {
     const promptMessage = prompt
 
     const response = await openai.chat.completions.create({
-      model: 'ft:gpt-3.5-turbo-0613:personal:woodie-ai:8KXGjDZN',
+      model: 'ft:gpt-3.5-turbo-0613:personal:woodie2-ai:8LRApWOh',
       temperature,
       messages: [
         {role: 'user', content: promptMessage}
