@@ -27,28 +27,28 @@ export function App() {
     <div className="min-h-screen flex flex-col">
       <div className="px-6 py-3 flex items-center justify-between border-b">
         <div className="flex items-center">
-          <img src="favicon.png" alt="logo" width={35} className="flex flex-1"/>
-          <h1 className="text-2xl font-bold flex ml-4">
+          <img src="favicon.png" alt="logo" width={45} className="flex flex-1"/>
+          <h1 className="text-3xl font-bold flex ml-4">
             Woodie.ai
           </h1>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="text-sm text-muted-foreground">
+          <span className="text-sm md:text-lg text-muted-foreground hidden md:flex md:gap-1">
             Desenvolvido para o TCC do <a href="https://www.inatel.br/" className="underline font-bold">Inatel</a>
           </span>
 
           <Separator orientation="vertical" className="h-6" />
 
           <Button variant="outline">
-            <Github className="w-4 h-4 mr-2" />
+            <Github className="w-4 h-4 mr-2 flex" />
             <a href="https://github.com/jvoliveirag/TCC">Github</a>
           </Button>
         </div>
       </div>
 
-      <main className="flex-1 p-6 flex gap-6">
-        <div className="flex flex-col flex-1 gap-4">
+      <main className="md:flex-1 p-6 md:flex gap-6">
+        <div className="flex flex-col flex-1 gap-4 mb-6 md:mb-0">
           <div className="grid grid-rows-2 gap-4 flex-1">
             <Textarea 
               className="resize-none p-4 leading-relaxed"
@@ -64,12 +64,12 @@ export function App() {
             />
           </div>
 
-          <p className="text-sm text-muted-foreground">
-            Desenvolvido por <code className="text-violet-400">{'{João Victor de Oliveira}'}</code> - Cachoeira de Minas, 2023. Todos os direitos reservados.
+          <p className="text-sm text-muted-foreground hidden md:flex md:gap-1">
+            Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/' className="underline text-violet-400">João Victor de Oliveira</a>| Cachoeira de Minas, 2023. Todos os direitos reservados.
           </p>
         </div>
 
-        <aside className="w-80 space-y-6">
+        <aside className="md:w-80 md:space-y-6">
 
           <form onSubmit={handleSubmit} className="space-y-6">
 
@@ -119,7 +119,11 @@ export function App() {
             </Button>
           </form>
         </aside>
+
       </main>
+      <p className="text-xs text-muted-foreground md:hidden text-center align-baseline mb-4">
+        Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/'><code className="text-violet-400">{'{João Victor de Oliveira}'}</code></a>, Cachoeira de Minas, 2023. Todos os direitos reservados.
+      </p>
     </div>
   )
 }
