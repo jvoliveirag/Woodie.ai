@@ -1,18 +1,22 @@
 // App.tsx
-import React from 'react';
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { AuthenticationGuard } from './components/authentication-guard';
 import { HomePage } from './pages/home';
 import { InitialPage } from './pages/initialPage';
+import { ProfilePage } from './pages/profilePage';
 
-export const App: React.FC = () => {
+export const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<InitialPage />} />
-        <Route path="/home" element={<HomePage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<InitialPage />} />
+      <Route 
+        path="/home" 
+        element={<AuthenticationGuard component={HomePage} />} 
+      />
+      <Route 
+        path="/profile" 
+        element={<AuthenticationGuard component={ProfilePage} />} 
+      />
+    </Routes>
   );
 };
-
-export default App;

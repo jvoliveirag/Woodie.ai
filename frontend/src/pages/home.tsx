@@ -1,4 +1,4 @@
-import { LogoutButton } from "@/components/logout";
+import { NavBar } from "@/components/navbar";
 import { useCompletion } from "ai/react";
 import { Wand2 } from "lucide-react";
 import { useState } from "react";
@@ -26,18 +26,7 @@ export function HomePage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="px-6 py-3 flex items-center justify-between border-b">
-        <div className="flex items-center">
-          <img src="favicon.png" alt="logo" width={45} className="flex flex-1"/>
-          <h1 className="text-3xl font-bold flex ml-4">
-            Woodie.ai
-          </h1>
-        </div>
-
-        <div>
-          <LogoutButton></LogoutButton>
-        </div>
-      </div>
+      <NavBar path="/home"></NavBar>
 
       <main className="md:flex-1 p-6 md:flex gap-6">
         <div className="flex flex-col flex-1 gap-4 mb-6 md:mb-0">
@@ -62,7 +51,6 @@ export function HomePage() {
         </div>
 
         <aside className="md:w-80 md:space-y-6">
-
           <form onSubmit={handleSubmit} className="space-y-6">
 
             <div className="space-y-2">
@@ -119,3 +107,6 @@ export function HomePage() {
     </div>
   )
 }
+
+
+  
