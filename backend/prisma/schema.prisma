@@ -7,9 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-//Tabela
+//Tabela prompts
 model Prompt {
   id       String @id @default(uuid())
   title    String
   template String
+}
+
+//Tabela equipe
+model Team {
+  id           String   @id @default(uuid())
+  createdAt    DateTime @default(now())
+  name         String
+  email        String   @unique
+  providedInfo Boolean
+  teamInfo     String
 }

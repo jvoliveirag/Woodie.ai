@@ -13,3 +13,24 @@ Content-Type: application/json
   "temperature": 0.5,
   "prompt": "me fale as melhores rodas para um robo de fll"
 }
+
+###
+
+# @name submit-team-info
+
+POST http://localhost:3333/team/submit/info
+Content-Type: application/json
+
+{
+  "name": "Equipe teste", 
+  "email": "equipeteste@gmail.com", 
+  "providedInfo": true,
+  "teamInfo": "teste equipe info"
+}
+
+###
+
+# @name check-if-team-submitted-info-by-email
+
+GET http://localhost:3333/team/check/info/equipeteste2@gmail.com
+Content-Type: application/json
