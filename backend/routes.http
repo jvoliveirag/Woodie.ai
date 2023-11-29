@@ -32,5 +32,5 @@ Content-Type: application/json
 
 # @name check-if-team-submitted-info-by-email
 
-GET http://localhost:3333/team/check/info/equipeteste2@gmail.com
+GET http://localhost:3333/team/check/info/jv.oliveirag@gmail.com
 Content-Type: application/json

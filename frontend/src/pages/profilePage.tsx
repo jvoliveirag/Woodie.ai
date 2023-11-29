@@ -7,13 +7,13 @@ export function ProfilePage() {
     <div className="min-h-screen flex flex-col">
       <NavBar path="/home"></NavBar>
 
-      <main className="md:flex-1 p-6 md:flex gap-6">
-        <div className="flex flex-col flex-1 gap-4 mb-6 md:mb-0">
+      <main className="flex-1 p-6 md:flex gap-6">
+        <div className="flex flex-col flex-1 gap-4 mb-6 md:mb-0 items-center justify-center">
           <div className="grid grid-rows-2 gap-4 flex-1">
             <Profile></Profile>
           </div>
 
-          <p className="text-sm text-muted-foreground hidden md:flex md:gap-1">
+          <p className="text-xs text-muted-foreground hidden md:flex md:gap-1 align-baseline">
             Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/' className="underline text-violet-400">João Victor de Oliveira</a>| Cachoeira de Minas, 2023. Todos os direitos reservados.
           </p>
         </div>

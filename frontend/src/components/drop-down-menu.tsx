@@ -36,7 +36,7 @@ export function DropdownMenuDemo() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button className="rounded-full w-12 h-12">
+        <Button className="rounded-full w-12 h-12 hover:bg-purple-400">
           <ProfileImg></ProfileImg>
         </Button>
       </DropdownMenuTrigger>
