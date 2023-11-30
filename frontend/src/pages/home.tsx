@@ -34,7 +34,7 @@ export function HomePage() {
       const response = await api.get(`http://localhost:3333/team/check/info/${email}`)
       setTeamSubmittedInfo(response.data.hasSubmittedInfo)
       setError(null)
-      console.log('has submitted info', response.data.hasSubmittedInfo)
+      //console.log('has submitted info', response.data.hasSubmittedInfo)
     } catch (err) {
       setTeamSubmittedInfo(null)
       setError('Equipe não encontrada')

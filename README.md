@@ -10,9 +10,14 @@ Aqui são encontrados todos os códigos e arquivos relacionados ao desenvolvimen
 ## Desenvolvimento 🔨
 
 O projeto é dividido em três partes principais:
-1. **Backend:**
-2. **Frontend:**
-3. **Fine-tuning:** Nesta etapa foram aplicados os fundamentos de Machine Learning, bem como as práticas recomendadas pela <a href="#openai">OpenAI</a>.
+
+1. **Backend:** Consome o modelo criado através da <i>API</i> da OpenAI e expõe uma rota, por meio do <i>fastify</i> para conexão com o <i>frontend</i>. Também atua nas lógicas de negócio, tais como a validação dos dados e o envio de informações.
+
+
+2. **Frontend:** Responsável pela interação do usuário com o modelo treinado, bem como a inserção das informações da equipe. Foram criados componentes específicos para cada parte utilizando os <i>React hooks</i> para gerenciar os estados e enviar os dados nas requisições para o <i>backend</i>.
+
+
+3. **<i>Fine-tuning:</i>** Aqui são aplicados os fundamentos de <i>Machine Learning</i>, bem como as práticas recomendadas pela <a href="#openai">OpenAI</a>.
     * Primeiramente foram coletados e gerados dados sobre o tema;
     * Então foram divididos em 70% para treino e 30% para teste; 
     * Em seguida os dados foram estruturados conforme especificado na documentação da OpenAI (vide no exemplo abaixo ou <a href="https://github.com/jvoliveirag/TCC/blob/main/fine_tuning/data/training_data.jsonl">clique aqui</a> para visualizar todo o arquivo)
@@ -21,7 +26,7 @@ O projeto é dividido em três partes principais:
       {"messages": [{"role": "system", "content": "Você é um assistente técnico que ajuda uma equipe da FIRST LEGO League no processo de design de robôs, que inclui montagem com peças LEGO (rodas, sensores, controladores, etc), programação em blocos, estratégia na mesa de missões, documentação, apresentação, melhorias contínuas, pensamento crítico, proatividade e trabalho em equipe."}, {"role": "user", "content": "Como nós podemos ajustar as configurações do controlador PID para atender às necessidades específicas do nosso robô, considerando a estratégia de missão?"}, {"role": "assistant", "content": "Realizem testes práticos, coletem dados de desempenho, e ajustem os parâmetros do PID com base nos resultados para otimizar o controle do robô."}]}
       ~~~
 
-    * Após isso foram validados e algumas métricas foram geradas, tais como:
+    * Após isso foram validados e algumas métricas foram geradas, tais como (arquivo de exemplo - gerado no primeiro treinamento):
 
       ```
       Num samples: 196
@@ -50,22 +55,54 @@ O projeto é dividido em três partes principais:
       By default, you'll be charged for ~71733 tokens''
       ```
 
-    * Feita a validação, é feito  o upload do arquivo .jsonl para o ambiente da OpenAI, onde o novo modelo será treinado;
+    * Com os dados validados, é feito o <i>upload</i> do arquivo <code>.jsonl</code> para o ambiente da OpenAI, onde o novo modelo será treinado;
 
-    * Por fim, é feito o treinamento do modelo, com base nos dados enviados e este fica disponível para uso no playground da OpenAI, ou como <i>API</i>, que é o caso deste projeto.
+    * Por fim, é feito o treinamento do modelo, com base nos dados enviados e este fica disponível para uso no <i>playground</i> da OpenAI, ou como <i>API</i>, que é o caso deste projeto.
 
-    <b>OBS.:</b> é importante ressaltar que o <i>fine-tuning</i> (<i><a href="https://www.leewayhertz.com/parameter-efficient-fine-tuning/">PEFT</a></i>) permite que sejam usadas menores quantidades de dados para o treinamento do modelo.
+    <b><u>OBS.:</u></b> é importante ressaltar que o <i>fine-tuning</i> (<i><a href="https://www.leewayhertz.com/parameter-efficient-fine-tuning/">PEFT</a></i>) permite que sejam usadas menores quantidades de dados para o treinamento do modelo.
 
 ## Funcionamento ⚙️
 
+1. Clone este repositório em sua máquina;
+
+2. Em seguida, para instalar as dependências, nos diretórios do /frontend e /backend - para cada um - execute:
+
+```
+npm install
+```
+
+3. Na sequência, execute o comando a seguir para rodar a aplicação (tanto para o <i>front</i> quanto para o <i>backend</i>):
+```
+npm run dev
+```
+
+4. Para iniciar a comunicação com o banco de dados (abstração - <i>ORM</i>)
+```
+npx prisma studio
+```
+
+Após estes passos a aplicação estará pronta para uso.
+
+<b><u>OBS.:</u></b> Os endpoints podem ser testados diretamente no arquivo <code>routes.http</code>
 
 ## Requisitos 📋
-* Python 3.10
+* Python <i>(v3.10)</i>
 * Numpy
-* OpenAI (Conta/API key e lib)
+* OpenAI <i>(API key e lib)</i>
+* TypeScript <i>(v5.0.2)</i>
+* ReactJS <i>(v18.2.0)</i>
+* TailwindCSS
+* Axios
+* NodeJS <i>(v18.17.1)</i>
+* Fastify <i>(v4.23.0)</i>
+* PrismaORM <i>(v5.2.0)</i>
 
 ## Implementações futuras 💡
-
+* Adequação do banco de dados;
+* Testes automatizados, <i>CI/CD</i> e lançar oficialmente;
+* Salvar e poder selecionar prompts para consultar ou refazê-los;
+* Seleção de modelos para diferentes competições, categorias, etc;
+* Customização dos modelos (Open-source).
 
 ## Referências 📚
 
