@@ -81,9 +81,7 @@ npm run dev
 npx prisma studio
 ```
 
-Após estes passos a aplicação estará pronta para uso.
-
-<video controls src="https://youtu.be/bqWryQXb0RM"></video>
+Após estes passos a aplicação estará pronta para uso, o qual é demonstrado no vídeo disponível em: https://youtu.be/bqWryQXb0RM.
 
 <b><u>OBS.:</u></b> Os endpoints podem ser testados diretamente no arquivo <code>routes.http</code>
 
