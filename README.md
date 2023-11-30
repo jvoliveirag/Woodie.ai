@@ -83,6 +83,11 @@ npx prisma studio
 
 Após estes passos a aplicação estará pronta para uso.
 
+<video controls>
+  <source src="https://youtu.be/bqWryQXb0RM" type="video/mp4">
+</video>
+
+
 <b><u>OBS.:</u></b> Os endpoints podem ser testados diretamente no arquivo <code>routes.http</code>
 
 ## Requisitos 📋
