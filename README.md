@@ -11,10 +11,10 @@ Aqui são encontrados todos os códigos e arquivos relacionados ao desenvolvimen
 
 O projeto é dividido em três partes principais:
 
-1. **Backend:** Consome o modelo criado através da <i>API</i> da OpenAI e expõe uma rota, por meio do <i>fastify</i> para conexão com o <i>frontend</i>. Também atua nas lógicas de negócio, tais como a validação dos dados e o envio de informações.
+1. **<i>Backend</i>:** Consome o modelo criado através da <i>API</i> da OpenAI e expõe uma rota, por meio do <i>fastify</i> para conexão com o <i>frontend</i>. Também atua nas lógicas de negócio, tais como a validação dos dados e o envio de informações.
 
 
-2. **Frontend:** Responsável pela interação do usuário com o modelo treinado, bem como a inserção das informações da equipe. Foram criados componentes específicos para cada parte utilizando os <i>React hooks</i> para gerenciar os estados e enviar os dados nas requisições para o <i>backend</i>.
+2. **<i>Frontend</i>:** Responsável pela interação do usuário com o modelo treinado, bem como a inserção das informações da equipe. Foram criados componentes específicos para cada parte utilizando os <i>React hooks</i> para gerenciar os estados e enviar os dados nas requisições para o <i>backend</i>.
 
 
 3. **<i>Fine-tuning:</i>** Aqui são aplicados os fundamentos de <i>Machine Learning</i>, bem como as práticas recomendadas pela <a href="#openai">OpenAI</a>.
@@ -60,6 +60,15 @@ O projeto é dividido em três partes principais:
     * Por fim, é feito o treinamento do modelo, com base nos dados enviados e este fica disponível para uso no <i>playground</i> da OpenAI, ou como <i>API</i>, que é o caso deste projeto.
 
     <b><u>OBS.:</u></b> é importante ressaltar que o <i>fine-tuning</i> (<i><a href="https://www.leewayhertz.com/parameter-efficient-fine-tuning/">PEFT</a></i>) permite que sejam usadas menores quantidades de dados para o treinamento do modelo.
+
+    ***Métricas***
+
+    Os gráficos a seguir reprentam a perda no treinamento do primeiro e do último modelo gerados. 
+    
+    <img src="./images/graficos_perda.png">
+    
+    O primeiro gráfico exibe as perdas (eixo y) no treinamento, podendo ser observada grande variação ao longos dos “passos” (eixo x). O resultado final próximo de 1, vindo de uma crescente e inciando uma queda, mostra que ainda é possível reduzir significativamente as perdas e aproximar do valor ideal (0), o que já pode ser observado no segundo gráfico.
+
 
 ## Funcionamento ⚙️
 
