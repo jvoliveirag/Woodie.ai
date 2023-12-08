@@ -63,7 +63,7 @@ O projeto é dividido em três partes principais:
 
     ***Métricas***
 
-    Os gráficos a seguir reprentam a perda no treinamento do primeiro e do último modelo gerados. 
+    Os gráficos a seguir representam a perda no treinamento do primeiro e do último modelo gerados. 
     
     <img src="./images/graficos_perda.png">
     
