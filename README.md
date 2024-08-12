@@ -77,7 +77,7 @@ The project is divided into three main parts:
 1. Clone this repository;
 
 2. Create a new file <code>.env</code> to insert your credentials:
-    ~~~JSON
+    ~~~javascript
     //BACKEND
     DATABASE_URL= "file:./dev.db" //or your preferred database
     OPENAI_KEY = "your_api_key_here"
@@ -86,13 +86,13 @@ The project is divided into three main parts:
     MAIL_PASS = "your_mailing_service_password"
     ~~~
 
-    ~~~JSON
+    ~~~javascript
     //FINE-TUNING
     OPENAI_KEY = "your_api_key_here"
     FILE_ID = "file_to_uploaded_id"
     ~~~
 
-    ~~~JSON
+    ~~~javascript
     //FRONTEND
     REACT_APP_AUTH0_CALLBACK_URL = "your_callback_url"
     REACT_APP_AUTH0_DOMAIN = "yout_auth0_domain"
