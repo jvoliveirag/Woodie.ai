@@ -77,27 +77,27 @@ The project is divided into three main parts:
 1. Clone this repository;
 
 2. Create a new file <code>.env</code> to insert your credentials:
-    ```JSON
+    ~~~JSON
     //BACKEND
     DATABASE_URL= "file:./dev.db" //or your preferred database
     OPENAI_KEY = "your_api_key_here"
 
     MAIL_USER = "your_mailing_service_user"
     MAIL_PASS = "your_mailing_service_password"
-    ```
+    ~~~
 
-    ```JSON
+    ~~~JSON
     //FINE-TUNING
     OPENAI_KEY = "your_api_key_here"
     FILE_ID = "file_to_uploaded_id"
-    ```
+    ~~~
 
-    ```JSON
+    ~~~JSON
     //FRONTEND
     REACT_APP_AUTH0_CALLBACK_URL = "your_callback_url"
     REACT_APP_AUTH0_DOMAIN = "yout_auth0_domain"
     REACT_APP_AUTH0_CLIENT_ID = "your_auth0_id"
-    ```
+    ~~~
 
 3. Next, to install the dependencies, in the /frontend and /backend directories - for each one - run:
 
