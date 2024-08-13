@@ -31,7 +31,7 @@ export function HomePage() {
 
   async function checkIfTeamSubmittedInfo(email:string) {
     try {
-      const response = await api.get(`http://localhost:3333/team/check/info/${email}`)
+      const response = await api.get(`https://woodi-ai.onrender.com/team/check/info/${email}`)
       setTeamSubmittedInfo(response.data.hasSubmittedInfo)
       setError(null)
       //console.log('has submitted info', response.data.hasSubmittedInfo)
@@ -43,7 +43,7 @@ export function HomePage() {
   };
 
   const { input, setInput, handleInputChange, handleSubmit, completion, isLoading } = useCompletion({
-    api: 'http://localhost:3333/ai/complete',
+    api: 'https://woodi-ai.onrender.com/ai/complete',
     body: {
       temperature,
     },
