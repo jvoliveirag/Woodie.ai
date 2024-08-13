@@ -11,7 +11,7 @@ export const Auth0ProviderWithNavigate: React.FC<Auth0ProviderWithNavigateProps>
 
   const domain = "dev-z5ep3yq8wmmwut7h.us.auth0.com"
   const clientId = "dM36PH86KsBldlE8kw0REo38IzUJERLG"
-  const redirectUri = "http://localhost:5173/home"
+  const redirectUri = "http://woodie-ai.vercel.app/home"
 
   const onRedirectCallback = (appState: any) => {
     navigate(appState?.returnTo || window.location.pathname);
