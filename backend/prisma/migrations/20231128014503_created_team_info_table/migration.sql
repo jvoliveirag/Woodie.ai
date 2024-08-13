@@ -1,7 +1,0 @@
--- CreateTable
-CREATE TABLE "TeamInfo" (
-    "id" TEXT NOT NULL PRIMARY KEY,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "info" TEXT NOT NULL,
-    CONSTRAINT "TeamInfo_info_fkey" FOREIGN KEY ("info") REFERENCES "Team" ("email") ON DELETE RESTRICT ON UPDATE CASCADE
-);
