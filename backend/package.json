@@ -41,6 +41,7 @@
     "nlw_ai_api": "file:",
     "nodemailer": "^6.9.7",
     "openai": "^4.6.0",
+    "uuid": "^10.0.0",
     "zod": "^3.22.2"
   }
 }
