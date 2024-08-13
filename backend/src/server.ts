@@ -17,6 +17,7 @@ app.register(submitTeamInfo)
 app.register(checkIfTeamSubmittedInfo)
 
 app.listen({
+  host: "0.0.0.0",
   port: process.env.PORT ? Number(process.env.PORT) : defaultPort,
 }).then(() => {
   console.log("HTTP Server running")
