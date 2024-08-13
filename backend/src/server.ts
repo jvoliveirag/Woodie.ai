@@ -6,7 +6,7 @@ import { getAllPromptsRoute } from "./routes/get-all-prompts";
 import { submitTeamInfo } from "./routes/submit-team-info";
 
 const app = fastify()
-const port = 3333
+const defaultPort = 3333
 
 app.register(fastifyCors, {
   origin: "*", //em prod colocar exatamente o endereço do front
@@ -17,8 +17,8 @@ app.register(submitTeamInfo)
 app.register(checkIfTeamSubmittedInfo)
 
 app.listen({
-  port: port,
+  port: process.env.PORT ? Number(process.env.PORT) : defaultPort,
 }).then(() => {
-  console.log(`HTTP Server running on port ${port}`)
+  console.log("HTTP Server running")
 })
 
