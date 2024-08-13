@@ -22,7 +22,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@types/jwt-decode": "^3.1.0",
     "ai": "^2.2.12",
-    "axios": "^1.7.3",
+    "axios": "^1.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "dotenv": "^16.3.1",
