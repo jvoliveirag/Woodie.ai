@@ -1,5 +1,5 @@
 {
-  "name": "nlw_ai_api",
+  "name": "woodie_ai_api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -38,10 +38,10 @@
     "@prisma/client": "^5.2.0",
     "ai": "^2.2.12",
     "fastify": "^4.23.0",
-    "nlw_ai_api": "file:",
     "nodemailer": "^6.9.7",
     "openai": "^4.6.0",
     "uuid": "^10.0.0",
+    "woodie_ai_api": "file:",
     "zod": "^3.22.2"
   }
 }
