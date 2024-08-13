@@ -85,7 +85,7 @@ export function HomePage() {
           <form onSubmit={handleSubmit} className="space-y-6">
 
             <div className="space-y-2">
-              <Label>Prompt</Label>
+              <Label>Prompts cadastrados</Label>
               <PromptSelect onPromptSelected={setInput} />
             </div>
 
