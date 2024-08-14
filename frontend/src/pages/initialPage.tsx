@@ -17,7 +17,7 @@ export function InitialPage() {
 
       <main className="flex flex-col flex-1 items-center justify-center relative">
         <div className="flex flex-1 relative">
-          <img src="../../public/bg.png" width={930} alt="" className="align-self-end pt-16 md:ml-72 hidden md:flex" />
+          <img src="" width={930} alt="" className="align-self-end pt-16 md:ml-72 hidden md:flex" />
           <div className="absolute top-1/2 pb-8 md:ml-44 md:pl-96 transform -translate-x-1/2 -translate-y-1/2 text-white md:text-6xl text-5xl font-bold space-y-8">
             <h1 className="">
               A transformação 

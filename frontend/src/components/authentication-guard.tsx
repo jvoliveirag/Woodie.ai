@@ -13,7 +13,7 @@ export const AuthenticationGuard: React.FC<Auth0ProviderWithNavigateProps> = ({ 
         <h1 className="text-3xl font-bold animate-pulse">Carregando...</h1>
       </div>
     ),
-    returnTo: "/home"
+    //returnTo: "/profile"
   });
 
   return <Component />;
