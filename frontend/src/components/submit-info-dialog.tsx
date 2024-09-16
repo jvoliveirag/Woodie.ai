@@ -48,17 +48,17 @@ export function SubmitInfoDialog() {
         teamInfo
       });
 
-      alert("Informações enviadas com sucesso!");
+      alert("Information submitted successfully!");
       window.location.reload();
       
     } catch (error: any) {
-      let errorMessage = "Erro desconhecido ao enviar informações.";
+      let errorMessage = "Unknown error sending information.";
 
       if (error.response && error.response.data && error.response.data.message) {
         errorMessage = error.response.data.message;
       }
 
-      console.error("Erro ao enviar informações:", errorMessage);
+      console.error("Error sending information:", errorMessage);
       alert(errorMessage);
     }
   };
@@ -67,20 +67,20 @@ export function SubmitInfoDialog() {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <a className="underline text-purple-500 cursor-pointer">
-          aqui
+          here
         </a>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle className="text-xl">Enviar informações da equipe</AlertDialogTitle>
+          <AlertDialogTitle className="text-xl">Submit team information</AlertDialogTitle>
           <AlertDialogDescription>
-            Ajuste as informações como desejado e clique em "Enviar" para confirmar.
+            Input the information about your team and robot and click "Submit" to confirm.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <form>
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Nome da equipe</Label>
+              <Label htmlFor="name">Team name</Label>
               <Input id="name" disabled placeholder={name} />
             </div>
             <div className="flex flex-col space-y-1.5">
@@ -88,8 +88,8 @@ export function SubmitInfoDialog() {
               <Input id="email" disabled placeholder={email} />
             </div>
             <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="info">Informações</Label>
-              <Input id="info" placeholder='Insira as informações da sua equipe' value={teamInfo} onChange={(e) => (
+              <Label htmlFor="info">Details</Label>
+              <Input id="info" placeholder='Input the information about your team and robot' value={teamInfo} onChange={(e) => (
                   setTeamInfo(e.target.value), 
                   setProvidedInfo(true)
                 )}
@@ -98,8 +98,8 @@ export function SubmitInfoDialog() {
           </div>
         </form>
         <AlertDialogFooter>
-          <AlertDialogCancel>Cancelar</AlertDialogCancel>
-          <AlertDialogAction onClick={handleSubmit}>Enviar</AlertDialogAction>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction onClick={handleSubmit}>Submit</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>

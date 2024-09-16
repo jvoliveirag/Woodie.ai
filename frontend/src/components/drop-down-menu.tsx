@@ -57,45 +57,45 @@ export function DropdownMenuDemo() {
         <DropdownMenuGroup>
           <DropdownMenuItem>
             <User className="mr-2 h-4 w-4" />
-            <span><a href="/profile">Perfil</a></span>
+            <span><a href="/profile">Profile</a></span>
           </DropdownMenuItem>
           <DropdownMenuItem>
             <Settings className="mr-2 h-4 w-4" />
-            <span>Configurações</span>
+            <span>Settings</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
             <Users className="mr-2 h-4 w-4" />
-            <span>Equipe</span>
+            <span>Team</span>
           </DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
               <UserPlus className="mr-2 h-4 w-4" />
-              <span>Convidar membros</span>
+              <span>Invite members</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
                 <DropdownMenuItem>
                   <Mail className="mr-2 h-4 w-4" />
-                  <span>Email</span>
+                  <span>E-mail</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  <span>Mensagem</span>
+                  <span>Message</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
                   <PlusCircle className="mr-2 h-4 w-4" />
-                  <span>Mais...</span>
+                  <span>More...</span>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
           <DropdownMenuItem>
             <Plus className="mr-2 h-4 w-4" />
-            <span>Nova Equipe</span>
+            <span>New Team</span>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
@@ -106,7 +106,7 @@ export function DropdownMenuDemo() {
         <DropdownMenuSeparator />
         <DropdownMenuItem>
           <button className="flex items-center" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-            <LogOut className="mr-2 h-4 w-4" /> Sair
+            <LogOut className="mr-2 h-4 w-4" /> Logout
           </button>
         </DropdownMenuItem>
       </DropdownMenuContent>

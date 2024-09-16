@@ -14,13 +14,13 @@ export function ProfilePage() {
           </div>
 
           <p className="text-xs text-muted-foreground hidden md:flex md:gap-1 align-baseline">
-            Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/' className="underline text-violet-400">João Victor de Oliveira</a>| Cachoeira de Minas, 2023. Todos os direitos reservados.
+            Developed by <a href='https://www.linkedin.com/in/joaov-oliveira/' className="underline text-violet-400">João Victor de Oliveira</a>| Cachoeira de Minas, 2023. All rights reserved.
           </p>
         </div>
 
       </main>
       <p className="text-xs text-muted-foreground md:hidden text-center align-baseline mb-4">
-        Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/'><code className="text-violet-400">{'{João Victor de Oliveira}'}</code></a>, Cachoeira de Minas, 2023. Todos os direitos reservados.
+        Developed by <a href='https://www.linkedin.com/in/joaov-oliveira/'><code className="text-violet-400">{'{João Victor de Oliveira}'}</code></a>, Cachoeira de Minas, 2023. All rights reserved.
       </p>
     </div>
   )

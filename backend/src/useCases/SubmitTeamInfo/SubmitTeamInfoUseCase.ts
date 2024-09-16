@@ -13,7 +13,7 @@ export class SubmitTeamInfoUseCase {
     const teamInfoAlreadyExists = await this.teamsRepository.findByEmail(data.email)
 
     if(teamInfoAlreadyExists?.providedInfo) {
-      throw new Error("As informações já foram submetidas.")
+      throw new Error("The information has already been submitted.")
     }
 
     const team = new Team(data)

@@ -35,7 +35,7 @@ export function PromptSelect(props: PromptSelectProps) {
   return (
     <Select onValueChange={handlePromptSelected} disabled={!prompts || prompts.length === 0}>
       <SelectTrigger>
-        <SelectValue placeholder={!prompts || prompts.length === 0 ? "Não há prompts salvos" : "Selecione um prompt"}/>
+        <SelectValue placeholder={!prompts || prompts.length === 0 ? "There are no saved prompts" : "Select a prompt"}/>
       </SelectTrigger>
       <SelectContent>
         {prompts?.map(prompt => {

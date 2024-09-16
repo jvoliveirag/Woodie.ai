@@ -64,20 +64,20 @@ export function HomePage() {
           <div className="grid grid-rows-2 gap-4 flex-1">
             <Textarea 
               className="resize-none p-4 leading-relaxed"
-              placeholder="Inclua o prompt para a IA..."
+              placeholder="How can I help you?"
               value={input}
               onChange={handleInputChange}
             />
             <Textarea 
               className="resize-none p-4 leading-relaxed"
-              placeholder="Resultado gerado pela IA..." 
+              placeholder="The answer will be displayed here." 
               readOnly
               value={completion}
             />
           </div>
 
           <p className="text-xs text-muted-foreground hidden md:flex md:gap-1">
-            Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/' className="underline text-violet-400">João Victor de Oliveira</a>| Cachoeira de Minas, 2023. Todos os direitos reservados.
+            Developed by <a href='https://www.linkedin.com/in/joaov-oliveira/' className="underline text-violet-400">João Victor de Oliveira</a>| Cachoeira de Minas, 2023. All rights reserved.
           </p>
         </div>
 
@@ -85,12 +85,12 @@ export function HomePage() {
           <form onSubmit={handleSubmit} className="space-y-6">
 
             <div className="space-y-2">
-              <Label>Prompts cadastrados</Label>
+              <Label>Saved prompts</Label>
               <PromptSelect onPromptSelected={setInput} />
             </div>
 
             <div className="space-y-2">
-              <Label>Modelo</Label>
+              <Label>Model</Label>
               <Select disabled defaultValue="woodie">
                 <SelectTrigger>
                   <SelectValue/>
@@ -101,14 +101,14 @@ export function HomePage() {
                 </SelectContent>
               </Select>
               <span className="block text-xs text-muted-foreground italic">
-                Você poderá customizar essa opção em breve
+                You will be able to customize this option soon.
               </span>
             </div>
 
             <Separator/>
 
             <div className="space-y-4">
-              <Label>Temperatura: <span className="border border-slate-800 rounded-sm px-1 text-base">{temperature}</span></Label>
+              <Label>Temperature: <span className="border border-slate-800 rounded-sm px-1 text-base">{temperature}</span></Label>
               <Slider
                 className="cursor-pointer"
                 min={0}
@@ -118,19 +118,19 @@ export function HomePage() {
                 onValueChange={value => setTemperature(value[0])}
               />
               <span className="block text-xs text-muted-foreground italic leading-relaxed">
-                Valores mais altos tendem a deixar o resultado mais criativo (porém com possíveis erros).
+                Higher values ​tend to make the result more creative (although with possible errors).
               </span>
             </div>
 
             <Separator />
 
             <Button disabled={isLoading || !teamSubmittedInfo} type="submit" className="w-full">
-              Executar
+              Run
               <Wand2 className="w-4 h-4 ml-2"/>
             </Button>
             {!teamSubmittedInfo && (
               <span className="block text-base text-muted-foreground italic leading-relaxed">
-                Para desbloquear o botão insira suas informações clicando <SubmitInfoDialog></SubmitInfoDialog>.
+                To unlock the button enter your information by clicking <SubmitInfoDialog></SubmitInfoDialog>.
               </span>
             )}
 
@@ -139,7 +139,7 @@ export function HomePage() {
 
       </main>
       <p className="text-xs text-muted-foreground md:hidden text-center align-baseline mb-4">
-        Desenvolvido por <a href='https://www.linkedin.com/in/joaov-oliveira/'><code className="text-violet-400">{'{João Victor de Oliveira}'}</code></a>, Cachoeira de Minas, 2023. Todos os direitos reservados.
+        Developed by <a href='https://www.linkedin.com/in/joaov-oliveira/'><code className="text-violet-400">{'{João Victor de Oliveira}'}</code></a>, Cachoeira de Minas, 2023. All rights reserved.
       </p>
     </div>
   )
