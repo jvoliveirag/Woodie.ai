@@ -41,7 +41,7 @@ export function SubmitInfoDialog() {
   
   const handleSubmit = async () => {
     try {
-      await api.post('https://woodi-ai.onrender.com/team/submit/info', {
+      await api.post('/team/submit/info', {
         name,
         email,
         providedInfo,
