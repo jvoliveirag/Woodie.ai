@@ -65,6 +65,7 @@ export function HomePage() {
             <Textarea 
               className="resize-none p-4 leading-relaxed"
               placeholder="How can I help you?"
+              disabled={!teamSubmittedInfo}
               value={input}
               onChange={handleInputChange}
             />
@@ -125,12 +126,12 @@ export function HomePage() {
             <Separator />
 
             <Button disabled={isLoading || !teamSubmittedInfo} type="submit" className="w-full">
-              Run
+              {isLoading ? "Generating" : "Run"}
               <Wand2 className="w-4 h-4 ml-2"/>
             </Button>
             {!teamSubmittedInfo && (
               <span className="block text-base text-muted-foreground italic leading-relaxed">
-                To unlock the button enter your information by clicking <SubmitInfoDialog></SubmitInfoDialog>.
+                To unlock the button and the text field enter your information by clicking <SubmitInfoDialog></SubmitInfoDialog>.
               </span>
             )}
 
