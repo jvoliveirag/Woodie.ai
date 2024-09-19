@@ -6,7 +6,7 @@ export const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Carregando ...</div>;
+    return <div>Loading...</div>;
   }
 
   return (
@@ -23,8 +23,8 @@ export const Profile = () => {
                 </div>
                 <div className="md:space-y-2">
                   <h2 className="font-bold md:text-2xl text-lg">{user.name}</h2>
-                  <p className="font-bold">Email: <span className="font-normal">{user.email}</span></p>
-                  <p className="font-bold">Equipes: <span className="font-normal">RobotBulls, TILT</span></p>
+                  <p className="font-bold">E-mail: <span className="font-normal">{user.email}</span></p>
+                  <p className="font-bold">Teams: <span className="font-normal">RobotBulls, TILT</span></p>
                 </div>
               </div>
             </>

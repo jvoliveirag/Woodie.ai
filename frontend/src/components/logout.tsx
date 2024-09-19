@@ -6,7 +6,7 @@ export const LogoutButton = () => {
 
   return (
     <Button variant={"ghost"} className="font-normal" onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-      Sair
+      Logout
     </Button>
   );
 };

@@ -1,8 +1,22 @@
+# @name get-team-info
+GET http://localhost:3333/team/info/jv.oliveirag@gmail.com
+
+# @name get-responses
+GET http://localhost:3333/responses
+###
 
 # @name get-prompts
 GET http://localhost:3333/prompts
 
 ### 
+
+# @name save-prompts
+POST http://localhost:3333/prompts/save
+Content-Type: application/json
+
+  "Como testar os sensores do meu robo fll?"
+
+###
 
 # @name generate-ai-completion
 

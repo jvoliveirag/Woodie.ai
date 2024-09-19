@@ -79,11 +79,11 @@ The project is divided into three main parts:
 2. Create a new file <code>.env</code> to insert your credentials:
     ~~~javascript
     //BACKEND
-    DATABASE_URL= "file:./dev.db" //or your preferred database
+    DATABASE_URL= "your_db_url" //I used a container with postgresql
     OPENAI_KEY = "your_api_key_here"
 
-    MAIL_USER = "your_mailing_service_user"
-    MAIL_PASS = "your_mailing_service_password"
+    MAIL_USER = "your_mailing_service_user" //optional
+    MAIL_PASS = "your_mailing_service_password" //optional
     ~~~
 
     ~~~javascript
@@ -94,9 +94,15 @@ The project is divided into three main parts:
 
     ~~~javascript
     //FRONTEND
-    REACT_APP_AUTH0_CALLBACK_URL = "your_callback_url"
-    REACT_APP_AUTH0_DOMAIN = "yout_auth0_domain"
-    REACT_APP_AUTH0_CLIENT_ID = "your_auth0_id"
+    VITE_AUTH0_DOMAIN = "your_auth0_domain"
+    VITE_AUTH0_CLIENT_ID = "your_auth0_client_id"
+    ~~~
+
+    2.1 You can also create two other <code>.env</code> in order to better organize your files and separete them in: <code>.env.production</code> and <code>.env.development</code>
+
+    ~~~javascript
+    VITE_AUTH0_CALLBACK_URL = <callback_url_of_your_env_prod_or_dev>
+    VITE_CONNECTION_SERVER = <server_url_of_your_env_prod_or_dev>
     ~~~
 
 3. Next, to install the dependencies, in the /frontend and /backend directories - for each one - run:
@@ -105,13 +111,21 @@ The project is divided into three main parts:
     npm install
     ```
 
-4. To start communication with the database (abstraction - <i>ORM</i>):
+4. Start your database. 
+
+    **Note.:** If you are using docker remember to get the image of your prefered db (which is set in <code>schema.prisma</code> as "provider") and insert the correct url for the database on your backend <code>.env</code> file run on your terminal:
+    ```
+    docker run <container_id>
+    ```
+    or just press the play button on docker desktop interface.
+
+5. To start communication with the database (abstraction - <i>ORM</i>):
 
     ```
     npx prisma studio
     ```
 
-5. Then, run the following command to start the application (both for <i>front</i> and <i>backend</i>):
+6. Then, run the following command to start the application (both for <i>front</i> and <i>backend</i>):
 
     ```
     npm run dev
@@ -133,13 +147,14 @@ After these steps, the application will be ready to use. Click <a href="https://
 * NodeJS <i>(v18.17.1)</i>
 * Fastify <i>(v4.23.0)</i>
 * PrismaORM <i>(v5.2.0)</i>
+* Docker
 
 ## Future implementation proposals 💡
-* Database Optimization;
-* Automated Testing, CI/CD pipelines, and official release;
-* Save and Select Prompts for Consultation or Reuse;
-* Selection of Models for Different Competitions, Categories, etc.;
-* Customization of Models (Open-source);
+- [ ] Database Optimization
+- [ ] Automated Testing, CI/CD pipelines, and official release
+- [x] Save and Select Prompts for Consultation or Reuse
+- [ ] Selection of Models for Different Competitions, Categories, etc.
+- [ ] Customization of Models (Open-source)
 
 ## References 📚
 

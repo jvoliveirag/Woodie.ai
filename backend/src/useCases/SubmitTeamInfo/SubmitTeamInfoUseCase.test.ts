@@ -91,6 +91,6 @@ describe('SubmitTeamInfoUseCase', () => {
     // Act and Assert
     await expect(
       submitTeamInfoUseCase.execute(teamInfoRequest),
-    ).rejects.toThrow('As informações já foram submetidas.');
+    ).rejects.toThrow('The information has already been submitted.');
   });
 });

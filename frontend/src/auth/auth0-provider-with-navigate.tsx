@@ -9,9 +9,9 @@ interface Auth0ProviderWithNavigateProps {
 export const Auth0ProviderWithNavigate: React.FC<Auth0ProviderWithNavigateProps> = ({ children }) => {
   const navigate = useNavigate();
 
-  const domain = "dev-z5ep3yq8wmmwut7h.us.auth0.com"
-  const clientId = "dM36PH86KsBldlE8kw0REo38IzUJERLG"
-  const redirectUri = "http://woodie-ai.vercel.app/home"
+  const domain = import.meta.env.VITE_AUTH0_DOMAIN 
+  const clientId = import.meta.env.VITE_AUTH0_CLIENT_ID 
+  const redirectUri = import.meta.env.VITE_AUTH0_CALLBACK_URL 
 
   const onRedirectCallback = (appState: any) => {
     navigate(appState?.returnTo || window.location.pathname);

@@ -10,7 +10,7 @@ export const AuthenticationGuard: React.FC<Auth0ProviderWithNavigateProps> = ({ 
   const Component = withAuthenticationRequired(component, {
     onRedirecting: () => (
       <div className="min-h-screen flex cursor-wait justify-center items-center">
-        <h1 className="text-3xl font-bold animate-pulse">Carregando...</h1>
+        <h1 className="text-3xl font-bold animate-pulse">Loading...</h1>
       </div>
     ),
     returnTo: "/home"

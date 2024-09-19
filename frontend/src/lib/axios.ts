@@ -1,5 +1,5 @@
 import axios from 'axios'
 
 export const api = axios.create({
-  baseURL: 'https://woodi-ai.onrender.com'
+  baseURL: import.meta.env.VITE_CONNECTION_SERVER
 })
