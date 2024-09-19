@@ -1,3 +1,6 @@
+# @name get-responses
+GET http://localhost:3333/responses
+###
 
 # @name get-prompts
 GET http://localhost:3333/prompts

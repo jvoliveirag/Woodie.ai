@@ -5,6 +5,7 @@ import { generateAiCompletionRoute } from "./routes/generate-ai-completion";
 import { getAllPromptsRoute } from "./routes/get-all-prompts";
 import { submitTeamInfo } from "./routes/submit-team-info";
 import { savePrompt } from "./routes/save-prompt";
+import { getAllResponsesRoute } from "./routes/get-all-responses";
 
 const app = fastify()
 const defaultPort = 3333
@@ -17,6 +18,7 @@ app.register(generateAiCompletionRoute)
 app.register(submitTeamInfo)
 app.register(checkIfTeamSubmittedInfo)
 app.register(savePrompt)
+app.register(getAllResponsesRoute)
 
 app.listen({
   host: "0.0.0.0",
