@@ -28,6 +28,7 @@ export function HomePage() {
   const [email, setEmail] = useState('');
   const [teamSubmittedInfo, setTeamSubmittedInfo] = useState<boolean | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [reloadKey, setReloadKey] = useState(0);
 
   async function checkIfTeamSubmittedInfo(email: string) {
     try {
@@ -59,6 +60,7 @@ export function HomePage() {
         },
       });
       alert("Prompt saved successfully!");
+      setReloadKey(prev => prev + 1);
       //setInput(''); // Clear textarea on success
     } catch (error: any) {
       let errorMessage = "Unknown error saving information.";
@@ -104,7 +106,7 @@ export function HomePage() {
 
             <div className="space-y-2">
               <Label>Saved prompts</Label>
-              <PromptSelect onPromptSelected={setInput} />
+              <PromptSelect onPromptSelected={setInput} reloadKey={reloadKey} />
             </div>
 
             <div className="space-y-2">

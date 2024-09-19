@@ -10,6 +10,7 @@ interface Prompt {
 
 interface PromptSelectProps {
   onPromptSelected: (template: string) => void
+  reloadKey: number; // Usado para forçar o recarregamento quando algo mudar no componente pai
 }
 
 export function PromptSelect(props: PromptSelectProps) {
@@ -20,7 +21,7 @@ export function PromptSelect(props: PromptSelectProps) {
     api.get('/prompts').then(response => {
       setPrompts(response.data)
     })
-  },[])
+  },[props.reloadKey]) // Quando reloadKey mudar, faz a requisição novamente
 
   function handlePromptSelected(promptId: string) {
     const selectedPrompt = prompts?.find(prompt => prompt.id === promptId)
@@ -40,7 +41,9 @@ export function PromptSelect(props: PromptSelectProps) {
       <SelectContent className="max-h-28 overflow-y-auto">
         {prompts?.map(prompt => {
           return(
-            <SelectItem key={prompt.id} value={prompt.id}>{prompt.title}</SelectItem>
+            <SelectItem key={prompt.id} value={prompt.id}>
+              {prompt.title}
+            </SelectItem>
           ) 
         })}
       </SelectContent>
