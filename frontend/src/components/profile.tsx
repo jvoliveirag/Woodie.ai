@@ -25,8 +25,6 @@ export const Profile = () => {
                   <h2 className="font-bold md:text-2xl text-lg">{user.name}</h2>
                   <p className="font-bold">E-mail: <span className="font-normal">{user.email}</span></p>
                   <p className="font-bold">Teams: <span className="font-normal">RobotBulls, TILT</span></p>
-                  <p className="font-bold">Team information: <span className="font-normal">Lorem ipsum dolor...</span></p>
-                  <p className="font-bold">Saved responses: <span className="font-normal">Lorem ipsum dolor...</span></p>
                 </div>
               </div>
             </>

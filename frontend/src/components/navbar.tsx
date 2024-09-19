@@ -1,4 +1,4 @@
-import { Book, Mail } from "lucide-react";
+import { Bell, Book } from "lucide-react";
 import { DropdownMenuDemo } from "./drop-down-menu";
 
 interface NavBarProps {
@@ -20,7 +20,7 @@ export function NavBar(props: NavBarProps) {
         <a className="hidden md:block hover:underline hover:underline-offset-8 hover:text-purple-400" href="https://github.com/jvoliveirag/TCC">Documentation</a>
         <a className="hidden md:block hover:underline hover:underline-offset-8 hover:text-purple-400 cursor-pointer">Notifications</a>
         <a className="md:hidden" href="https://github.com/jvoliveirag/TCC"><Book></Book></a>
-        <a className="md:hidden"><Mail></Mail></a>
+        <a className="md:hidden"><Bell></Bell></a>
         <DropdownMenuDemo></DropdownMenuDemo>
       </div>
     </div>
