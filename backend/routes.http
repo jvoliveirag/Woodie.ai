@@ -4,6 +4,14 @@ GET http://localhost:3333/prompts
 
 ### 
 
+# @name save-prompts
+POST http://localhost:3333/prompts/save
+Content-Type: application/json
+
+  "Como testar os sensores do meu robo fll?"
+
+###
+
 # @name generate-ai-completion
 
 POST http://localhost:3333/ai/complete

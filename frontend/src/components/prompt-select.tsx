@@ -37,7 +37,7 @@ export function PromptSelect(props: PromptSelectProps) {
       <SelectTrigger>
         <SelectValue placeholder={!prompts || prompts.length === 0 ? "There are no saved prompts" : "Select a prompt"}/>
       </SelectTrigger>
-      <SelectContent>
+      <SelectContent className="max-h-28 overflow-y-auto">
         {prompts?.map(prompt => {
           return(
             <SelectItem key={prompt.id} value={prompt.id}>{prompt.title}</SelectItem>
