@@ -1,3 +1,6 @@
+# @name get-team-info
+GET http://localhost:3333/team/info/jv.oliveirag@gmail.com
+
 # @name get-responses
 GET http://localhost:3333/responses
 ###

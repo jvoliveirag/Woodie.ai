@@ -1,13 +1,34 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavBar } from "@/components/navbar";
 import { Profile } from "@/components/profile";
 import { ResponseSelect } from "@/components/response-select";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@radix-ui/react-dropdown-menu";
+import { useAuth0 } from "@auth0/auth0-react";
+import { api } from "@/lib/axios"; // Ajuste o caminho conforme necessário
 
 export function ProfilePage() {
-  // Estado para armazenar a resposta selecionada
+  const { user, isAuthenticated, isLoading } = useAuth0();
+
   const [selectedResponseText, setSelectedResponseText] = useState<string>("");
+  
+  const [teamInfo, setTeamInfo] = useState<string>("");
+
+  useEffect(() => {
+    if (isAuthenticated && user) {
+      api.get(`/team/info/${user.email}`)
+        .then(response => {
+          setTeamInfo(response.data);
+        })
+        .catch(error => {
+          console.error("Failed to fetch team info:", error);
+        });
+    }
+  }, [isAuthenticated, user]);
+
+  if (isLoading) {
+    return <div>Carregando ...</div>;
+  }
 
   return (
     <div className="min-h-screen flex flex-col relative">
@@ -18,24 +39,22 @@ export function ProfilePage() {
           <div className="flex flex-col md:w-1/3 w-full">
             <Profile />
             <Label className="mt-4 mb-2">Saved responses</Label>
-            {/* Passa o callback para atualizar a resposta selecionada */}
             <ResponseSelect onResponseSelected={setSelectedResponseText} />
           </div>
 
           <div className="grid grid-rows-2 gap-4 flex-1 md:mt-0 mt-4 md:pb-4">
             <div className="space-y-4">
-              {/* Preencher o textarea com a resposta selecionada */}
               <Textarea
                 className="resize-none p-4 leading-relaxed flex-1 h-full"
                 placeholder="Your saved responses will be displayed here."
                 readOnly
-                value={selectedResponseText} // Valor da resposta selecionada
+                value={selectedResponseText} 
               />
               <Textarea
                 className="resize-none p-4 leading-relaxed flex-1 h-full"
                 placeholder="Team information."
                 readOnly
-                // value={teamInfo}
+                value={teamInfo} 
               />
             </div>
           </div>
